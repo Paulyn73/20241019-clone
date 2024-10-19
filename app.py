@@ -5,6 +5,8 @@ app = Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
+    q = float(request.form.get("q"))
+
     return(render_template("index.html"))
 
 @app.route("/prediction_DBS",methods=["GET","POST"])
